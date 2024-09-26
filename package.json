@@ -1,0 +1,28 @@
+{
+  "name": "test-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "report": "npx playwright test --reporter=html && npx playwright show-report",
+    "debug": "npx playwright test --debug",
+    "test": "npx playwright test",
+    "test-ui": "npx playwright test --ui",
+    "test-us": "npx playwright test --update-snapshots",
+    "github-action": "npx playwright test --config=github.config.ts",
+    "generate:otp": "node ./utils/get-otp.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^20.11.30",
+    "dotenv": "^16.4.5",
+    "eslint-plugin-playwright": "^1.5.4",
+    "otpauth": "^9.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
